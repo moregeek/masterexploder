@@ -371,8 +371,8 @@ sub calc_lower_uper_level {
 
   &debug("sub::calc_lower_uper_level", "<entered sub>") if ( $settings{'debug'} eq '1' );
 
-  local ($ya, $ys, $yc) = 1;
-  local ($na, $ns, $nc) = 1;
+  local ($ya, $ys, $yc) = (1)x3;
+  local ($na, $ns, $nc) = (1)x3;
   
   for $r (  keys(%{$values{'roundstats'}})  ) {
     if ($values{'roundstats'}{$r}{'yes_no'} eq 0) {
